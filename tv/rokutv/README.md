@@ -1,5 +1,7 @@
 # Market Wall Roku TV Prototype
 
+![Roku TV 金融 Dashboard 封面](prototype-preview.jpg)
+
 这是 Roku TV 金融 Dashboard 的浏览器交互原型，使用 1920x1080 逻辑画布，在 3840x2160 浏览器视口中以 2 倍等比显示。字体、图表、边距和焦点框一起缩放；非 16:9 窗口保留黑边，不裁切画面。
 
 内容区为 1534x866，逻辑画布左右留白 193px、上下留白 107px。4K 浏览器视口中分别为 386px 和 214px。此原型尚非 Roku 安装包，原生 SceneGraph 的渲染效果仍需在电视上验证。
