@@ -12,7 +12,7 @@ Open source TV dashboard prototypes and device-specific applications.
 
 ## Layout
 
-TV projects live under tv/<platform> so future versions can be added without mixing platform-specific assets or controls.
+TV projects live under `tv/<platform>` so future versions can be added without mixing platform-specific assets or controls.
 
 ## License
 
