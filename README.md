@@ -2,13 +2,17 @@
 
 Open source TV dashboard prototypes and device-specific applications.
 
+![全球金融 TV Demo 封面](tv/rokutv/prototype-preview.jpg)
+
+仓库根目录新增了一个可直接打开的独立版金融 TV Demo：[roku-finance-top3-standalone-2.html](roku-finance-top3-standalone-2.html)。
+
 ## Projects
 
-- [`tv/rokutv`](tv/rokutv/README.md): Roku TV Market Wall prototype, designed on a 1920x1080 logical canvas and checked at 3840x2160.
+- [tv/rokutv](tv/rokutv/README.md): Roku TV Market Wall prototype, designed on a 1920x1080 logical canvas and checked at 3840x2160.
 
 ## Layout
 
-TV projects live under `tv/<platform>` so future versions can be added without mixing platform-specific assets or controls.
+TV projects live under tv/<platform> so future versions can be added without mixing platform-specific assets or controls.
 
 ## License
 
