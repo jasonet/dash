@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Wall - Roku TV Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="tv-shell" aria-label="Market Wall Roku TV 金融仪表盘原型">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div>
+            <p class="eyebrow">MARKET WALL</p>
+            <p class="market-clock" id="marketClock">纽约 09:41:26</p>
+          </div>
+        </div>
+
+        <nav class="market-nav" aria-label="市场分类">
+          <button class="nav-item focusable is-selected" data-section="global">全球市场</button>
+          <button class="nav-item focusable" data-section="watchlist">我的自选</button>
+          <button class="nav-item focusable" data-section="news">要闻</button>
+          <button class="nav-item focusable" data-section="calendar">日历</button>
+        </nav>
+
+        <div class="status-cluster">
+          <span class="live-dot"></span>
+          <span>演示行情</span>
+          <span class="divider"></span>
+          <span>4K UHD</span>
+          <span class="divider"></span>
+          <span>V02</span>
+        </div>
+      </header>
+
+      <section class="ticker-strip" aria-label="主要指数">
+        <article class="ticker-card is-active focusable" tabindex="0" data-symbol="SPX">
+          <div class="ticker-top"><span>S&amp;P 500</span><span class="market-tag">美</span></div>
+          <strong>5,648.40</strong>
+          <div class="ticker-bottom up"><span>▲ 0.54%</span><span>+30.26</span></div>
+        </article>
+        <article class="ticker-card focusable" tabindex="-1" data-symbol="IXIC">
+          <div class="ticker-top"><span>NASDAQ</span><span class="market-tag">美</span></div>
+          <strong>17,713.62</strong>
+          <div class="ticker-bottom up"><span>▲ 0.83%</span><span>+146.03</span></div>
+        </article>
+        <article class="ticker-card focusable" tabindex="-1" data-symbol="HSI">
+          <div class="ticker-top"><span>恒生指数</span><span class="market-tag">港</span></div>
+          <strong>17,444.30</strong>
+          <div class="ticker-bottom down"><span>▼ 0.39%</span><span>-67.86</span></div>
+        </article>
+        <article class="ticker-card focusable" tabindex="-1" data-symbol="SSE">
+          <div class="ticker-top"><span>上证指数</span><span class="market-tag">中</span></div>
+          <strong>2,765.81</strong>
+          <div class="ticker-bottom down"><span>▼ 0.17%</span><span>-4.67</span></div>
+        </article>
+        <article class="ticker-card focusable" tabindex="-1" data-symbol="BTC">
+          <div class="ticker-top"><span>Bitcoin</span><span class="market-tag">币</span></div>
+          <strong>$58,214</strong>
+          <div class="ticker-bottom up"><span>▲ 1.24%</span><span>+713</span></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="hero-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-label">美国 · 标普500指数</p>
+              <div class="quote-line">
+                <h1 id="heroValue">5,648.40</h1>
+                <span class="quote-change up" id="heroChange">▲ 30.26&nbsp;&nbsp; +0.54%</span>
+              </div>
+            </div>
+            <div class="range-switcher" role="group" aria-label="走势图周期">
+              <button class="range focusable is-selected">1日</button>
+              <button class="range focusable">1周</button>
+              <button class="range focusable">1月</button>
+              <button class="range focusable">1年</button>
+            </div>
+          </div>
+
+          <div class="chart-wrap" aria-label="标普500日内走势">
+            <svg viewBox="0 0 960 330" role="img" aria-label="标普500上涨趋势图">
+              <defs>
+                <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#54e7ab" stop-opacity="0.34" />
+                  <stop offset="100%" stop-color="#54e7ab" stop-opacity="0" />
+                </linearGradient>
+                <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+              </defs>
+              <g class="grid-lines">
+                <line x1="0" y1="46" x2="960" y2="46"/><line x1="0" y1="116" x2="960" y2="116"/>
+                <line x1="0" y1="186" x2="960" y2="186"/><line x1="0" y1="256" x2="960" y2="256"/>
+              </g>
+              <path class="area" d="M0,260 C48,250 63,212 111,227 C156,241 169,201 215,206 C265,210 278,158 330,174 C379,189 390,138 448,151 C496,162 520,114 574,124 C629,134 647,93 704,105 C753,116 777,70 830,82 C879,92 905,43 960,50 L960,330 L0,330 Z" />
+              <path class="chart-line" d="M0,260 C48,250 63,212 111,227 C156,241 169,201 215,206 C265,210 278,158 330,174 C379,189 390,138 448,151 C496,162 520,114 574,124 C629,134 647,93 704,105 C753,116 777,70 830,82 C879,92 905,43 960,50" />
+              <line class="cursor-line" x1="830" y1="24" x2="830" y2="286" />
+              <circle class="cursor-dot" cx="830" cy="82" r="7" />
+              <g class="axis-labels"><text x="0" y="318">09:30</text><text x="296" y="318">11:00</text><text x="602" y="318">13:00</text><text x="895" y="318">16:00</text></g>
+            </svg>
+          </div>
+
+          <div class="chart-stats">
+            <div><span>今开</span><strong>5,612.10</strong></div>
+            <div><span>最高</span><strong>5,652.19</strong></div>
+            <div><span>最低</span><strong>5,603.74</strong></div>
+            <div><span>成交量</span><strong>1.82B</strong></div>
+          </div>
+        </article>
+
+        <aside class="side-stack">
+          <article class="watch-panel">
+            <div class="side-title"><span>我的自选</span><span class="muted">价格 / 日涨跌</span></div>
+            <button class="watch-row focusable"><span><b>NVDA</b><small>英伟达</small></span><strong>119.10</strong><em class="up">▲ 1.92%</em></button>
+            <button class="watch-row focusable"><span><b>AAPL</b><small>苹果</small></span><strong>222.50</strong><em class="up">▲ 0.18%</em></button>
+            <button class="watch-row focusable"><span><b>TSLA</b><small>特斯拉</small></span><strong>226.17</strong><em class="down">▼ 1.52%</em></button>
+            <button class="watch-row focusable"><span><b>BABA</b><small>阿里巴巴</small></span><strong>84.69</strong><em class="down">▼ 0.74%</em></button>
+          </article>
+
+          <article class="pulse-panel">
+            <div class="side-title"><span>市场脉搏</span><span class="sentiment">偏多</span></div>
+            <div class="gauge" aria-label="市场情绪 68 偏多">
+              <svg viewBox="0 0 240 126" aria-hidden="true">
+                <defs>
+                  <linearGradient id="gaugeStroke" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#ff7369" />
+                    <stop offset="52%" stop-color="#ffc65a" />
+                    <stop offset="100%" stop-color="#54e7ab" />
+                  </linearGradient>
+                </defs>
+                <path class="gauge-track" d="M20 110 A100 100 0 0 1 220 110" />
+                <path class="gauge-progress" d="M20 110 A100 100 0 0 1 220 110" />
+                <line class="gauge-needle" x1="120" y1="110" x2="166" y2="49" />
+                <circle class="gauge-hub" cx="120" cy="110" r="7" />
+              </svg>
+              <div class="gauge-value"><strong>68</strong><span>偏多</span></div>
+            </div>
+            <div class="breadth"><span>上涨 318</span><div><i style="width: 68%"></i></div><span>下跌 149</span></div>
+          </article>
+        </aside>
+      </section>
+
+      <footer class="news-rail">
+        <span class="breaking-label">市场快讯</span>
+        <div class="news-copy"><b>DEMO</b><span>所有行情、走势和资讯均为演示数据。</span></div>
+        <div class="remote-help"><kbd>方向键</kbd><span>移动</span><kbd>OK</kbd><span>选择</span><kbd>Esc</kbd><span>返回</span><kbd>*</kbd><span>收藏</span></div>
+      </footer>
+      <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+        <div class="sheet-heading"><div><p class="section-label">MARKET WALL / 演示</p><h2 id="sheetTitle"></h2></div><button class="focusable close-sheet">返回 · Esc</button></div>
+        <div class="sheet-content"></div>
+      </section>
+      <div class="toast" role="status" aria-live="polite" hidden></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
