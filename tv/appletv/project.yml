@@ -1,0 +1,20 @@
+name: MarketWall
+options:
+  bundleIdPrefix: com.jasonet.dash
+targets:
+  MarketWall:
+    type: application
+    platform: tvOS
+    deploymentTarget: "15.0"
+    sources:
+      - MarketWall.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jasonet.dash.marketwall
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Market Wall
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+        SWIFT_VERSION: 5.0
+        TARGETED_DEVICE_FAMILY: 3
+        CODE_SIGN_STYLE: Automatic
