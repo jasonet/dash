@@ -8,6 +8,10 @@ Open source TV dashboard prototypes and device-specific applications.
 
 ## Projects
 
+- [tv/appletv](tv/appletv/README.md): Apple TV HD（第四代）及后续 4K 机型的原生 tvOS 金融看板，要求 tvOS 15+。
+
+![Apple TV 原生版预览](tv/appletv/preview.png)
+
 - [tv/rokutv](tv/rokutv/README.md): Roku TV Market Wall prototype, designed on a 1920x1080 logical canvas and checked at 3840x2160.
 
 ## Layout
