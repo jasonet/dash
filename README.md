@@ -13,7 +13,6 @@ Open source TV dashboard prototypes and device-specific applications.
 ![Apple TV 原生版预览](tv/appletv/preview.png)
 
 - [tv/rokutv](tv/rokutv/README.md)：Roku TV Market Wall prototype，设计逻辑画布为 1920x1080，并检查至 3840x2160。
-- [tv/firetv](tv/firetv/README.md)：Amazon Fire TV 原生 Android 看板，重点面向 Fire TV Stick 4K 的遥控器和 16:9 TV 模式。
 - [tv/androidtablet](tv/androidtablet/README.md)：Android 平板原生看板，支持横屏、竖屏、触控和方向键，并使用内置数据缓存快速首屏。
 
 ## Layout
